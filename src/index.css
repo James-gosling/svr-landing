@@ -1,0 +1,355 @@
+/* ─── Google Fonts ─── */
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ════════════════════════════════════════
+   BASE
+════════════════════════════════════════ */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  body {
+    background-color: #030712;
+    color: #cbd5e1;
+    font-family: 'Inter', ui-sans-serif, system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: #030712; }
+  ::-webkit-scrollbar-thumb { background: #1e3a5f; border-radius: 2px; }
+  ::-webkit-scrollbar-thumb:hover { background: #7dd3fc; }
+}
+
+/* ════════════════════════════════════════
+   KEYFRAMES
+════════════════════════════════════════ */
+
+/* Slow star drift */
+@keyframes star-drift {
+  0%   { transform: translateY(0px) translateX(0px); opacity: 0.4; }
+  50%  { opacity: 0.8; }
+  100% { transform: translateY(-40px) translateX(10px); opacity: 0.4; }
+}
+
+/* Synapse pulse along axon */
+@keyframes axon-pulse {
+  0%   { stroke-dashoffset: 200; opacity: 0; }
+  10%  { opacity: 0.9; }
+  90%  { opacity: 0.9; }
+  100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+/* Quantum glow breathe */
+@keyframes quantum-breathe {
+  0%, 100% { opacity: 0.4; transform: scale(1); }
+  50%       { opacity: 0.7; transform: scale(1.08); }
+}
+
+/* Neural node pulse */
+@keyframes node-pulse {
+  0%, 100% { transform: scale(1); opacity: 0.6; }
+  50%       { transform: scale(1.4); opacity: 1; }
+}
+
+/* Subtle text shimmer (metallic) */
+@keyframes metal-shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+
+/* Frost card hover glow */
+@keyframes frost-glow {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(125,211,252,0); }
+  50%       { box-shadow: 0 0 30px 2px rgba(125,211,252,0.08); }
+}
+
+/* Coordinate blink */
+@keyframes coord-blink {
+  0%, 80%, 100% { opacity: 1; }
+  90%            { opacity: 0.3; }
+}
+
+/* Slow orbit ring */
+@keyframes orbit-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes orbit-rev {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(-360deg); }
+}
+
+/* Synaptic data-dot travel */
+@keyframes synapse-travel {
+  0%   { offset-distance: 0%;   opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+
+/* Grid slow scroll */
+@keyframes grid-drift {
+  0%   { background-position: 0 0; }
+  100% { background-position: 80px 80px; }
+}
+
+/* Scan sweep */
+@keyframes scan-sweep {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  8%   { opacity: 1; }
+  92%  { opacity: 1; }
+  100% { transform: translateY(1200%); opacity: 0; }
+}
+
+/* Float */
+@keyframes float-gentle {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-8px); }
+}
+
+/* ════════════════════════════════════════
+   UTILITIES
+════════════════════════════════════════ */
+@layer utilities {
+
+  /* ── Typography ── */
+  .font-mono-tech {
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+  }
+
+  /* Ice-blue to silver metallic text */
+  .text-quantum {
+    background: linear-gradient(135deg, #e2e8f0 0%, #7dd3fc 35%, #bae6fd 55%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Pure silver metallic */
+  .text-metallic {
+    background: linear-gradient(180deg, #f1f5f9 0%, #94a3b8 45%, #64748b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Animated shimmer metallic */
+  .text-metallic-shimmer {
+    background: linear-gradient(90deg, #94a3b8 0%, #e2e8f0 25%, #7dd3fc 50%, #e2e8f0 75%, #94a3b8 100%);
+    background-size: 600px 100%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: metal-shimmer 6s linear infinite;
+  }
+
+  /* Quantum glow text accent */
+  .text-quantum-glow {
+    color: #7dd3fc;
+    text-shadow: 0 0 20px rgba(125,211,252,0.5), 0 0 50px rgba(125,211,252,0.2);
+  }
+
+  /* ── Backgrounds ── */
+  .bg-gradient-radial {
+    background-image: radial-gradient(var(--tw-gradient-stops));
+  }
+
+  /* Neural grid overlay */
+  .neural-grid {
+    background-image:
+      linear-gradient(rgba(125,211,252,0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(125,211,252,0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+    animation: grid-drift 20s linear infinite;
+  }
+
+  /* Deep space base gradient */
+  .bg-deep-space {
+    background: linear-gradient(160deg, #030712 0%, #050919 30%, #07051a 60%, #030b14 100%);
+  }
+
+  /* ── Cards ── */
+  /* Premium frosted glass */
+  .glass-card {
+    background: rgba(7, 15, 35, 0.55);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.07);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  .glass-card:hover {
+    border-color: rgba(125,211,252,0.25);
+    box-shadow: 0 0 40px rgba(125,211,252,0.06), 0 0 80px rgba(125,211,252,0.03), inset 0 0 30px rgba(125,211,252,0.02);
+  }
+
+  /* Highlighted card (INFRA) */
+  .glass-card-highlight {
+    background: rgba(10, 20, 50, 0.6);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid rgba(125,211,252,0.2);
+    box-shadow: 0 0 40px rgba(125,211,252,0.08), 0 0 80px rgba(125,211,252,0.04);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+  }
+  .glass-card-highlight:hover {
+    border-color: rgba(125,211,252,0.4);
+    box-shadow: 0 0 60px rgba(125,211,252,0.14), 0 0 120px rgba(125,211,252,0.06);
+  }
+
+  /* Quantum glow blob */
+  .quantum-glow {
+    animation: quantum-breathe 6s ease-in-out infinite;
+  }
+
+  /* ── Buttons ── */
+  .btn-quantum-primary {
+    background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 50%, #7dd3fc 100%);
+    color: #020617;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    box-shadow: 0 0 25px rgba(56,189,248,0.35), 0 4px 20px rgba(14,165,233,0.2), inset 0 1px 0 rgba(255,255,255,0.25);
+    transition: all 0.25s ease;
+  }
+  .btn-quantum-primary:hover {
+    background: linear-gradient(135deg, #38bdf8 0%, #7dd3fc 100%);
+    box-shadow: 0 0 40px rgba(125,211,252,0.5), 0 8px 30px rgba(56,189,248,0.3);
+    transform: translateY(-2px);
+  }
+
+  .btn-quantum-ghost {
+    border: 1px solid rgba(125,211,252,0.25);
+    color: #7dd3fc;
+    background: rgba(125,211,252,0.04);
+    transition: all 0.25s ease;
+  }
+  .btn-quantum-ghost:hover {
+    border-color: rgba(125,211,252,0.5);
+    background: rgba(125,211,252,0.08);
+    box-shadow: 0 0 25px rgba(125,211,252,0.15);
+    color: #bae6fd;
+    transform: translateY(-1px);
+  }
+
+  /* ── Neural Hub Icon ── */
+  .neural-hub {
+    position: relative;
+  }
+  .neural-hub .hub-ring-1 {
+    animation: orbit-slow 12s linear infinite;
+  }
+  .neural-hub .hub-ring-2 {
+    animation: orbit-rev 8s linear infinite;
+  }
+
+  /* ── Scan line on containers ── */
+  .scan-overlay {
+    position: relative;
+    overflow: hidden;
+  }
+  .scan-overlay::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, rgba(125,211,252,0.3) 40%, rgba(125,211,252,0.3) 60%, transparent 100%);
+    animation: scan-sweep 8s linear infinite;
+    z-index: 20;
+    pointer-events: none;
+  }
+
+  /* ── Coordinate tag ── */
+  .coord-tag {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 9px;
+    color: rgba(125,211,252,0.5);
+    letter-spacing: 0.15em;
+    animation: coord-blink 4s ease-in-out infinite;
+  }
+
+  /* ── Terminal input ── */
+  .neuro-input {
+    background: rgba(5, 10, 30, 0.7);
+    border: 1px solid rgba(255,255,255,0.07);
+    border-radius: 6px;
+    color: #e2e8f0;
+    transition: all 0.25s ease;
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 0.875rem;
+    outline: none;
+  }
+  .neuro-input:focus {
+    border-color: rgba(125,211,252,0.5);
+    box-shadow: 0 0 0 1px rgba(125,211,252,0.1), 0 0 20px rgba(125,211,252,0.08);
+    background: rgba(7, 15, 40, 0.8);
+  }
+  .neuro-input::placeholder {
+    color: rgba(100,116,139,0.5);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 0.78rem;
+  }
+
+  /* Corner brackets (subtle) */
+  .cb-frame {
+    position: relative;
+  }
+  .cb-frame .cb-tl,
+  .cb-frame .cb-tr,
+  .cb-frame .cb-bl,
+  .cb-frame .cb-br {
+    position: absolute;
+    width: 12px; height: 12px;
+    border-style: solid;
+    border-color: rgba(125,211,252,0.3);
+    transition: all 0.4s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  .cb-frame .cb-tl { top: 0; left: 0;   border-width: 1px 0 0 1px; }
+  .cb-frame .cb-tr { top: 0; right: 0;  border-width: 1px 1px 0 0; }
+  .cb-frame .cb-bl { bottom: 0; left: 0;  border-width: 0 0 1px 1px; }
+  .cb-frame .cb-br { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
+  .cb-frame:hover .cb-tl,
+  .cb-frame:hover .cb-tr,
+  .cb-frame:hover .cb-bl,
+  .cb-frame:hover .cb-br {
+    width: 18px; height: 18px;
+    border-color: rgba(125,211,252,0.7);
+  }
+
+  /* Section label tag */
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 10px;
+    color: rgba(125,211,252,0.6);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  .section-tag::before {
+    content: '//';
+    color: rgba(125,211,252,0.3);
+  }
+
+  /* Star particle */
+  .star-particle {
+    position: absolute;
+    border-radius: 50%;
+    background: white;
+    pointer-events: none;
+    animation: star-drift 15s ease-in-out infinite;
+  }
+
+  /* Float gentle */
+  .float-gentle {
+    animation: float-gentle 6s ease-in-out infinite;
+  }
+}
