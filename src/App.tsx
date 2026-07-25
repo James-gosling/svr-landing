@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Methodology from './components/Methodology';
+import Guarantees from './components/Guarantees';
 import ContactForm from './components/ContactForm';
 import Footer from './components/Footer';
 import DashboardLayout from './dashboard/DashboardLayout';
@@ -16,6 +17,7 @@ function LandingPage() {
         <Hero />
         <Services />
         <Methodology />
+        <Guarantees />
         <ContactForm />
       </main>
       <Footer />

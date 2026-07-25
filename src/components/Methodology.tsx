@@ -89,27 +89,27 @@ const steps = [
   {
     label: 'Fase 1',
     icon: Search,
-    title: 'Diagnóstico (F1)',
+    title: 'Diagnóstico Express Sin Costo',
     description:
-      'Levantamiento presencial de requerimientos en el establecimiento, análisis de herramientas digitales y estructuración de la matriz teórica de riesgos.',
+      'Inspección presencial de 20 minutos en tu local. Evaluamos la salud de tu red actual y detectamos vulnerabilidades críticas, sin ningún compromiso.',
     accentColor: '#7dd3fc',
     accentRgb: '125,211,252',
   },
   {
     label: 'Fase 2',
     icon: ShieldCheck,
-    title: 'Inmunización (F2)',
+    title: 'Instalación del Carril VIP',
     description:
-      'Ejecución técnica de contramedidas, aislamiento lógico de redes inalámbricas de cobro y endurecimiento de directivas en dispositivos anfitriones.',
+      'Desplegamos la arquitectura SVR FORTRESS™ en menos de 24 horas. Aislamiento total de terminales de cobro sin interrumpir tus ventas.',
     accentColor: '#818cf8',
     accentRgb: '129,140,248',
   },
   {
     label: 'Fase 3',
     icon: Rocket,
-    title: 'Autonomía (F3)',
+    title: 'Validación en Vivo y Certificación',
     description:
-      'Redacción y entrega formal de los manuales interactivos de procedimientos de SVR y sesión de mentoría estratégica para capacitar al cliente.',
+      'Ejecutamos pruebas de estrés en tiempo real y te entregamos la acreditación oficial de "Comercio Seguro".',
     accentColor: '#38bdf8',
     accentRgb: '56,189,248',
   },

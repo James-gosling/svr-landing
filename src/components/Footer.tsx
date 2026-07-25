@@ -145,6 +145,19 @@ export default function Footer() {
                 Aseguramos, automatizamos y escalamos tu negocio con precisión.
               </p>
 
+              {/* Contact Info */}
+              <div className="mb-6 space-y-2">
+                <a href="https://wa.link/dblzts" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-sm text-slate-400 hover:text-sky-400 transition-colors">
+                  <span className="text-sky-500">›</span> WhatsApp Directo
+                </a>
+                <a href="mailto:sovereign@svr-intelligence.tech" className="flex items-center gap-2 text-sm text-slate-400 hover:text-sky-400 transition-colors">
+                  <span className="text-sky-500">›</span> sovereign@svr-intelligence.tech
+                </a>
+                <p className="flex items-center gap-2 text-sm text-slate-400">
+                  <span className="text-sky-500">›</span> Zibatá, El Marqués, Querétaro
+                </p>
+              </div>
+
               {/* Social icons */}
               <div className="flex items-center gap-2">
                 {SOCIAL.map(({ label, href, icon: Icon }) => (
