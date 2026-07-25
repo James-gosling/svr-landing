@@ -195,7 +195,7 @@ export default function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center pt-28 pb-24">
 
-        {/* AI status badge */}
+        {/* Scarcity / Location badge */}
         <div className="inline-flex items-center gap-3 px-5 py-2.5 rounded-full mb-8"
           style={{
             background: 'rgba(7,15,40,0.7)',
@@ -206,7 +206,7 @@ export default function Hero() {
         >
           <Cpu className="w-3.5 h-3.5 text-sky-400" style={{ filter: 'drop-shadow(0 0 6px rgba(125,211,252,0.6))' }} />
           <span className="font-mono-tech text-[10px] text-sky-400/80 uppercase tracking-[0.2em]">
-            [ SYSTEM MODEL: AGENTIC.ACTIVE ] — Agencia Elite de IA y Ciberinteligencia
+            [ PROGRAMA DE COMERCIOS FUNDADORES | ZIBATÁ Y EL MARQUÉS ]
           </span>
           <span className="relative flex h-1.5 w-1.5">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-60" />
@@ -216,40 +216,46 @@ export default function Hero() {
 
         {/* Main headline */}
         <h1 className="text-4xl sm:text-5xl lg:text-[66px] font-black leading-[1.05] tracking-tight mb-6">
-          <span className="text-metallic">Ciberinteligencia</span>
+          <span className="text-metallic">Cero Caídas.</span>
           <br />
-          <span className="text-quantum text-metallic-shimmer">de Nueva Generación</span>
-          <br />
-          <span className="text-metallic">para Empresas en Crecimiento</span>
+          <span className="text-quantum text-metallic-shimmer">Cero Ventas Perdidas.</span>
         </h1>
 
         {/* Subtitle separator */}
         <div className="flex items-center justify-center gap-3 mb-5">
           <div className="h-px flex-1 max-w-[80px]" style={{ background: 'linear-gradient(90deg, transparent, rgba(125,211,252,0.3))' }} />
           <span className="font-mono-tech text-[10px] text-sky-500/60 uppercase tracking-widest">
-            Inteligencia Artificial · Automatización · Defensa Cibernética
+            Continuidad Operativa · Protección Digital · Ciberinteligencia
           </span>
           <div className="h-px flex-1 max-w-[80px]" style={{ background: 'linear-gradient(270deg, transparent, rgba(125,211,252,0.3))' }} />
         </div>
 
-        <p className="max-w-2xl mx-auto text-base text-slate-400 leading-relaxed mb-10">
-          SVR fortalece tu infraestructura comercial, elimina caídas de red y despliega agentes de IA autónomos en WhatsApp para que tu local o comercio en Zibatá nunca pierda una sola venta.
-        </p>
+        {/* Core Hook & Value Prop */}
+        <div className="max-w-2xl mx-auto mb-10">
+          <p className="text-lg text-slate-300 leading-relaxed mb-4">
+            Implementamos un carril VIP e impenetrable para la red de cobro de tu negocio. Protección digital y continuidad operativa sin interrupciones.
+          </p>
+          <p className="text-sm font-mono-tech text-sky-400/80">
+            Un fallo de 5 minutos en el sistema de cobro en hora pico no es un problema técnico; es pérdida directa de ingresos.
+          </p>
+        </div>
 
         {/* CTAs */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-          <button
-            onClick={() => scrollTo('contact')}
+          <a
+            href="https://wa.link/dblzts"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-quantum-primary group flex items-center gap-2.5 px-8 py-3.5 rounded-lg text-sm font-semibold tracking-wide"
           >
-            Solicitar una Consulta
+            Agendar Inspección Express Sin Costo
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
+          </a>
           <button
             onClick={() => scrollTo('services')}
             className="btn-quantum-ghost flex items-center gap-2 px-8 py-3.5 rounded-lg text-sm font-semibold"
           >
-            Ver Paquetes
+            Ver Niveles de Blindaje
           </button>
         </div>
 
