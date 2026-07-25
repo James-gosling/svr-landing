@@ -4,54 +4,51 @@ const packages = [
   {
     tier: 'CORE',
     code: 'SVR-CORE™',
-    tagline: 'Shield & Diagnosis (Visibilidad de Riesgo)',
-    price: 'Desde $1,200',
-    period: '/ proyecto',
+    tagline: 'Visibilidad de Riesgos & Monitoreo',
+    price: '$1,200 MXN',
+    period: '/ mes',
     icon: Shield,
     accentRgb: '148,163,184',
     highlight: false,
-    statusLabel: 'DISPONIBLE',
+    statusLabel: 'BASE',
     features: [
-      'Evaluación presencial exhaustiva de la postura de seguridad base.',
-      'Auditoría perimetral de credenciales y cuentas críticas (OWASP).',
-      'Mapeo técnico de la superficie de ataque física y digital del local.',
-      'Entrega formal de Reporte Ejecutivo y Hoja de Ruta de remediación.',
+      'Inspección mensual de puntos débiles en la red local.',
+      'Reporte ejecutivo mensual de Salud Digital.',
+      'Alertas preventivas de fallas y vulnerabilidades.',
     ],
     cta: 'COMENZAR ->',
   },
   {
     tier: 'FORTRESS',
     code: 'SVR-FORTRESS™',
-    tagline: 'Hardening & Isolation (Continuidad & Blindaje)',
-    price: 'Desde $3,800',
-    period: '/ proyecto',
+    tagline: 'Carril VIP de Cobro & Continuidad Garantizada',
+    price: '$3,800 MXN',
+    period: '/ mes',
     icon: Server,
     accentRgb: '125,211,252',
     highlight: true,
     statusLabel: 'MÁS POPULAR',
     features: [
-      'Incluye la totalidad de los alcances del módulo CORE™.',
-      'Micro-segmentación lógica de red local para aislar redes de cobro (PoS) del Wi-Fi de clientes.',
-      'Despliegue de automatizaciones y flujos de trabajo inteligentes No-Code/Low-Code eficientes.',
-      'Entrega de Manuales Operativos de Procesos personalizados.',
+      'Todo lo incluido en el nivel SVR CORE™.',
+      'Creación y mantenimiento del Carril VIP de Cobro (Aislamiento de terminales PoS).',
+      'Garantía activa de 0 caídas (reconfiguración sin costo ante cambios de ISP).',
     ],
     cta: 'SOLICITAR PROPUESTA ->',
   },
   {
     tier: 'IMPERIUM',
     code: 'SVR-IMPERIUM™',
-    tagline: 'Co-Pilot & Mentorship (Soberanía Guiada)',
-    price: 'A medida',
-    period: '/ retainer estratégico',
+    tagline: 'Co-Piloto VIP & Director de TI Dedicado',
+    price: 'A la medida',
+    period: '/ mes',
     icon: Brain,
     accentRgb: '99,102,241',
     highlight: false,
-    statusLabel: 'MÁXIMA COBERTURA',
+    statusLabel: 'VIP RETAINER',
     features: [
-      'Bolsa de horas de consultoría técnica y soporte prioritario bajo demanda.',
-      'Auditorías de control presenciales y revisiones de estabilidad bimestrales.',
-      'Actualización guiada de manuales internos ante adopción de nuevas herramientas.',
-      'Sesiones de entrenamiento y transferencia de conocimiento técnico para el dueño o personal.',
+      'Todo lo incluido en CORE™ y FORTRESS™.',
+      'Soporte prioritario VIP presencial/remoto en < 2 horas.',
+      'Capacitación continua para personal y revisiones presenciales bimestrales.',
     ],
     cta: 'AGENDAR CONSULTA ->',
   },
@@ -89,12 +86,18 @@ export default function Services() {
             seguridad básica hasta operaciones autónomas de ciberinteligencia.
           </p>
 
-          {/* Pilot Retrofit Banner */}
-          <div className="inline-block p-[1px] rounded-xl bg-gradient-to-r from-sky-400/30 via-indigo-500/30 to-sky-400/30 mb-2">
-            <div className="bg-slate-950/80 backdrop-blur-md rounded-xl px-6 py-4 border border-white/5">
-              <p className="text-sm font-semibold text-sky-300">
-                🚀 PROGRAMA PILOTO EXCLUSIVO EN ZIBATÁ: <span className="text-slate-300 font-normal">Setup de Implementación e Higiene Digital a $0.00 MXN (Bonificado 100%) + Licenciamiento, Mentoría y Soporte Mensual por solo $1,500.00 MXN/mes. Incluye 7 días de prueba sin costo y cero plazos forzosos.</span>
-              </p>
+          {/* Scarcity Banner */}
+          <div className="inline-block p-[1px] rounded-xl bg-gradient-to-r from-sky-400/30 via-indigo-500/30 to-sky-400/30 mb-2 text-left">
+            <div className="bg-slate-950/80 backdrop-blur-md rounded-xl px-6 py-4 border border-white/5 max-w-3xl mx-auto">
+              <div className="flex items-center gap-2 mb-3">
+                <Shield className="w-5 h-5 text-sky-400" />
+                <h3 className="text-sm font-bold tracking-wide text-white uppercase">Programa de Comercios Fundadores</h3>
+              </div>
+              <ul className="text-sm text-slate-300 space-y-2 list-disc list-outside ml-4">
+                <li><span className="text-sky-300 font-semibold">Cupo limitado:</span> Máximo 3 a 5 negocios admitidos por mes en Zibatá y El Marqués para garantizar atención 100% personalizada y premium.</li>
+                <li><span className="text-sky-300 font-semibold">Tarifa congelada:</span> Precio de suscripción de por vida para los Comercios Fundadores aceptados.</li>
+                <li><span className="text-sky-300 font-semibold">Acreditación oficial:</span> Insignia física y digital de "Comercio Blindado & Seguro" para generar confianza en tus clientes.</li>
+              </ul>
             </div>
           </div>
         </div>
