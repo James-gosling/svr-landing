@@ -3,6 +3,8 @@ import { AppProvider } from './lib/AppContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
+import Addons from './components/Addons';
+import Continuity from './components/Continuity';
 import Methodology from './components/Methodology';
 import Guarantees from './components/Guarantees';
 import ContactForm from './components/ContactForm';
@@ -16,6 +18,8 @@ function LandingPage() {
       <main>
         <Hero />
         <Services />
+        <Addons />
+        <Continuity />
         <Methodology />
         <Guarantees />
         <ContactForm />
